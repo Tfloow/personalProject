@@ -9,4 +9,6 @@ while True:
     html_bytes = page.read()
     html = html_bytes.decode("utf-8")
     Prim_index = html.find("YourSearch")
-    print(Prim_index)
+    End_index = Prim_index + len("YourSearch")
+    Info = html[Prim_index:End_index]
+    print(Info)
